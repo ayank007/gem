@@ -1,1 +1,1 @@
-# gem
+# GeM Invoice upload extension (Chrome)
