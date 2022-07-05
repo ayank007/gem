@@ -1,6 +1,7 @@
 {
     "manifest_version":3,
     "name":"GeM Invoice Upload",
+    "description": "Making GeM Invoice Uploading Process 2X Faster",
     "version":"1.0",
     "content_scripts":[
         {
@@ -11,9 +12,18 @@
         }
     ],
     "icons":{"36":"gem36.png","48":"gem48.png"},
-    "permissions":["activeTab", "tabs"],
+    "permissions":["activeTab"],
     "action":{
         "default_popup": "popup.html",
         "default_title":"GeM Invoice Upload"
+    },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Opens popup.html"
+      }
     }
 }
