@@ -1,7 +1,7 @@
 {
     "manifest_version":3,
     "name":"GeM Invoice Upload",
-    "version":"0.01",
+    "version":"1.0",
     "content_scripts":[
         {
             "matches":[
@@ -10,9 +10,9 @@
             "js":["content.js"]
         }
     ],
+    "icons":{"36":"gem36.png","48":"gem48.png"},
     "permissions":["activeTab", "tabs"],
     "action":{
-        "default_icon":"gem.png",
         "default_popup": "popup.html",
         "default_title":"GeM Invoice Upload"
     }

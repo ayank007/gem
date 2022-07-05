@@ -15,9 +15,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
                 value=0.01
             }
             let id = "5116877-74966602953_29261844_" + (parseInt(i)+1)
-            document.getElementById(id).value = value
+            let input = document.getElementById(id)
+            if(input!=null){
+                input.value = value
+            }
         }
     }
     let response = {status: "done"}
-    sendResponse(response)
+    setTimeout(() => {
+        sendResponse(response)
+    }, 500);
+    return true
 })
