@@ -1,5 +1,6 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
     let data=request.value
+    let input_id = request.id
     let array = []
     if(data!=null){
         for(let i of data.split("\n")){
@@ -14,7 +15,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
             if(value==0 || value==0.00){
                 value=0.01
             }
-            let id = "5116877-74966602953_29261844_" + (parseInt(i)+1)
+            let id = input_id + (parseInt(i)+1)
             let input = document.getElementById(id)
             if(input!=null){
                 input.value = value
