@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
     let data=request.value
-    let input_id = request.id
+    let input_id = request.id.slice(0, -1)
     let array = []
     if(data!=null){
         for(let i of data.split("\n")){
